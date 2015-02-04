@@ -4,7 +4,12 @@
   Note: No using string.reverse() or array.reverse(), that's cheating :)
 */
 var reverseWord = function(word) {
+	var reversed = [];
+	for(x =0; x < word.length; x++){
+		reversed.unshift(word[x]);
 
+	}
+return reversed.join("")
 }
 
 
@@ -16,5 +21,15 @@ var reverseWord = function(word) {
   - Return a string that contains each reversed word, in order
 */
 var reverseSentence = function(sentence) {
+	var words = sentence.split(" ");
+	
+for (i = 0; i < words.length; i++){
+	words[i] = reverseWord(words[i]);
+
+
+
+}
+	return words.join(" ")
+
 
 }
